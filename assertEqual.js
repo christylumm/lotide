@@ -15,26 +15,30 @@ Assertion Passed: log --> actual + " === " + "expected"
 Check if string = string
 Check if number = number
 
-LAST STEP:
+CONDITIONAL STATEMENT = DONE:
 - Currently prints both assert statements, regardless of whether the statement is true or false
 - Should function:
     - if statement is false, print "Assertion Failed" console.log
     - if statmement is true, print "Assertion Passed" console.log
 
+REFACTOR:
+Changed around "Assertion Passed" and "Assertion Failed" labels, but confused on why operators are working.
+
 */
 
 const assertEqual = function(actual, expected) {
 
-  console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  console.assert(true, actual !== expected);
-  
-  console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  console.assert(true, actual === expected);
-
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    console.assert(true, actual !== expected);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.assert(false, actual === expected);
+  }
   
 };
 
 //TEST CODE
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
+assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 
