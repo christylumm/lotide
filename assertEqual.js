@@ -24,7 +24,7 @@ CONDITIONAL STATEMENT = DONE:
 REFACTOR:
 Changed around "Assertion Passed" and "Assertion Failed" labels, but confused on why operators are working.
 
-SOLVED: 
+SOLVED:
 Must run true conditional first, before running default false statement
 
 */
@@ -34,7 +34,7 @@ const assertEqual = function(actual, expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }  
+  }
 };
 
 //TEST CODE
