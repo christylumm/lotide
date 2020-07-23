@@ -30,13 +30,10 @@ Must run true conditional first, before running default false statement
 */
 
 const assertEqual = function(actual, expected) {
-
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-    console.assert(actual === expected);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-    console.assert(actual === expected);
   }  
 };
 

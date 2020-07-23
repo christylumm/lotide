@@ -23,19 +23,6 @@ const assertArraysEqual = function(actual, expected) {
   }
 }
 
-/*
-const assertEqual = function(actual, expected) {
-
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-    console.assert(actual === expected);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-    console.assert(actual === expected);
-  }  
-};
-*/
-
 //TEST
 assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 
@@ -50,6 +37,5 @@ STEPS:
 1. run eqArrays to compare if the index in each array is the same. 
 2. eqArrays: return true or false
 3. take that true/false result, assign it to actual variable
-4. 
 
 */
