@@ -7,3 +7,12 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKeyByValue = function()
+
+/*
+
+obj = {};
+val;
+
+findKeyByValue takes in object and value
+
+*/
