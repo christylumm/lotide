@@ -1,21 +1,14 @@
-const assertEqual = function(actual, expected) {
-  
-  //Previous exercise to compare if actual = expected
-
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-    console.assert(true, actual !== expected);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-    console.assert(false, actual === expected);
-  }
-};
+//Reference assertEqual.js function
+const assertEqual = require('./assertEqual');
 
 //Head function should return just the element itself
 
 const head = function(arr) {
-  return arr.shift();
+  return arr.shift(1);
 };
+
+module.exports = head;
 
 assertEqual(head([5, 6, 7]), 5);
 assertEqual(head(["Labs", "Lighthouse", "Labs"]), "Hello");
+

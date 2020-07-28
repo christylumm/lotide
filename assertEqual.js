@@ -37,7 +37,4 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//TEST CODE
-assertEqual("Lighthouse Labs", 1);
-assertEqual(1, 1);
-
+module.exports = assertEqual;
