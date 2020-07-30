@@ -1,15 +1,4 @@
-const eqArrays = function(arr1, arr2) {
-  //stop the loop if something is wrong
-
-  //Use the index to loop through
-  for (let index = 0; index < arr1.length; index++){
-    //this is the warning flag
-    if (arr1[index] !== arr2[index]){
-      return false;
-    }
-  }
-  return true;
-}
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = function(actual, expected) {
   let arr1 = [];
@@ -21,7 +10,9 @@ const assertArraysEqual = function(actual, expected) {
   } else if (actual !== eqArrays(arr1, arr2)) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
-}
+};
+
+module.exports = assertArraysEqual;
 
 //TEST
 assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);

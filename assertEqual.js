@@ -1,3 +1,13 @@
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
+
+module.exports = assertEqual;
+
 // FUNCTION IMPLEMENTATION: Make the function compare the two values it takes in and print out a message telling us if they match or not
 
 /*
@@ -28,13 +38,3 @@ SOLVED:
 Must run true conditional first, before running default false statement
 
 */
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-module.exports = assertEqual;

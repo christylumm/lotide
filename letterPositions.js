@@ -1,11 +1,3 @@
-/*
-PROGRAM:
-letterPositions will return all the indices (zero-based POSITION) in the string where each character is found
-
-For each letter, instead of returning just one number to represent its number of occurrences, multiple numbers may be needed to represent all the places in the string that it shows up
-
-*/
-
 const eqArrays = function(arr1, arr2) {
   //stop the loop if something is wrong
 
@@ -30,18 +22,33 @@ const assertArraysEqual = function(actual, expected) {
 
 const letterPositions = function(sentence) {
   const results = {};
-  const positions = [];
 
   for (let pos = 0; pos < sentence.length; pos++) {
-    
+    const char = sentence[pos];
+    if (results[char]) {
+      results[char].push(pos);
+    } else {
+      results[char] = [pos];
+    }
   }
+  console.log(results);
   return results;
 };
 
 //Dot notation accesses the specific letter in the string, nested inside the Object
 console.log(assertArraysEqual(letterPositions("hello").e, [1])); // => assertion failed
 
+
+
+
 /*
+---------------------------------------------------------
+
+PROGRAM:
+letterPositions will return all the indices (zero-based POSITION) in the string where each character is found
+
+For each letter, instead of returning just one number to represent its number of occurrences, multiple numbers may be needed to represent all the places in the string that it shows up
+
 
 LOGIC: 
 1. loop through the sentence
