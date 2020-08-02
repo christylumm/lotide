@@ -16,7 +16,7 @@ const assertEqual = function(actual, expected) {
 const findKey = function(obj, callback) {
   for (const key in obj) {
     //console.log(key);
-    if (obj[key] === callback(obj[key] === 2)) {
+    if (obj[key] === callback(obj[key])) {
       //console.log(obj[key]);
       return obj[key];
     } 
@@ -25,13 +25,10 @@ const findKey = function(obj, callback) {
 }
 
 const callback = function(objKey) {
-  let cbResult;
   if (objKey) {
-    cbResult = true;
-    return cbResult;
+    return true;
   } else {
-    cbResult = false;
-    return cbResult;
+    return false
   }
 }
 
