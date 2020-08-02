@@ -2,7 +2,6 @@
 const assertEqual = require('./assertEqual');
 
 const tail = function(arr) {
-  let result = 0;
   return arr.slice(1);
 };
 
