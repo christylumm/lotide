@@ -16,7 +16,7 @@ const eqArrays = function(arr1, arr2) {
 
 module.exports = eqArrays;
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, "3"]), true);
+/* assertEqual(eqArrays([1, 2, 3], [1, 2, "3"]), true); */
 
 /*
 //PSEUDO / LOGIC

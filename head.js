@@ -9,6 +9,3 @@ const head = function(arr) {
 
 module.exports = head;
 
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Labs", "Lighthouse", "Labs"]), "Hello");
-

@@ -1,24 +1,4 @@
-const eqArrays = function(arr1, arr2) {
-  //stop the loop if something is wrong
-
-  //Use the index to loop through
-  for (let index = 0; index < arr1.length; index++){
-    //this is the warning flag
-    if (arr1[index] !== arr2[index]){
-      return false;
-    }
-  }
-  return true;
-}
-
-const assertArraysEqual = function(actual, expected) {
-  let result = eqArrays(actual, expected);
-  if (result) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-}
+const assertArraysEqual = require('./assertArraysEqual');
 
 const middle = function(array) {
   //Empty middle array we'll push middle values to
@@ -46,17 +26,4 @@ const middle = function(array) {
   
 }
 
-//TEST: does middle function work?
-console.log(`Even numbered array: ${middle([1, 2, 3, 4, 5, 6])}`); // => 3, 4
-console.log(`Odd numbered array: ${middle([1, 2, 3, 4, 5])}`); // => 3
-console.log(`Random order array: ${middle([1, 2, 7, 2, 9, 1])}`); // => 7, 2
-
-//TEST: does middle work with assertArraysEqual
-//even numbered array
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 8, 9]), [3, 4])); // => assertion passed
-
-//odd numbered array
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 8]), ["3, 4"])); // => assertion failed
-
-//strings array
-console.log(assertArraysEqual(middle(["chocolate", "flour", "sprinkles", "sugar", "butter"]), ["sprinkles"])); // => assertion passed
+module.exports = middle;
