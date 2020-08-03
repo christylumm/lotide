@@ -1,10 +1,3 @@
-/*
-
-PROBLEM: 
-Implement the function findKey which takes in an object and a callback. It should scan the object and return the first key for which the callback returns a truthy value. If no key is found, then it should return undefined.
-
-*/
-
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -14,10 +7,9 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKey = function(obj, callback) {
-  for (const key in obj) {
+  for (let key in obj) {
     //console.log(key);
-    if (obj[key] === callback(obj[key])) {
-      //console.log(obj[key]);
+    if (callback === true) {
       return obj[key];
     } 
   }
@@ -25,11 +17,13 @@ const findKey = function(obj, callback) {
 }
 
 const callback = function(objKey) {
+  let cbResult;
   if (objKey) {
-    return true;
+    cbResult = true;
   } else {
-    return false
+    cbResult = false
   }
+  return cbResult;
 }
 
 
@@ -46,7 +40,7 @@ console.log(findKey({
 
 ---------------------------------------------------------
 
-PROGRAM:
+PROBLEM:
 Implement the function findKey which takes in an object and a callback. It should scan the object and return the first key for which the callback returns a truthy value. If no key is found, then it should return undefined.
 
 TIP:
