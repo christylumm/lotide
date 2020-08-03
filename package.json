@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "christylumm/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/christylumm/lotide.git"
   },
-  "author": "",
+  "author": "Christy Lum",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/christylumm/lotide/issues"
